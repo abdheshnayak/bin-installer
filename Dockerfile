@@ -7,7 +7,7 @@ WORKDIR /tmp/app
 COPY . .
 RUN go mod download -x
 
-RUN CGO_ENABLED=0 go build -tags musl -o /tmp/bin/bin-installer ./main.go
+RUN CGO_ENABLED=0 go build -o /tmp/bin/bin-installer ./main.go
 RUN chmod +x /tmp/bin/bin-installer
 
 FROM gcr.io/distroless/static-debian11:nonroot
