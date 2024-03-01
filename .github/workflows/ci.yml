@@ -1,4 +1,8 @@
 name: Build & Release
+
+permissions:
+  packages: write
+
 on:
   pull_request: {}
   push: {}
